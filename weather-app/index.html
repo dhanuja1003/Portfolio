@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WeatherNow</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <div class="bg-bubbles">
+    <span></span><span></span><span></span>
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="app-container">
+
+    <div class="app-header">
+      <div class="logo">
+        <div class="logo-icon">🌍</div>
+        <div>
+          <h1 class="app-title">WeatherNow</h1>
+          <p class="app-subtitle">Real-time weather anywhere</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-box">
+      <i class="fa fa-location-dot search-icon"></i>
+      <input type="text" id="city-input" placeholder="Search any city in the world..." autocomplete="off"/>
+      <button id="search-btn">
+        <i class="fa fa-search"></i> Search
+      </button>
+    </div>
+
+    <div class="error-msg" id="error-msg">
+      <i class="fa fa-circle-exclamation"></i>
+      <span id="error-text">City not found.</span>
+    </div>
+
+    <div class="weather-card" id="weather-card">
+
+      <div class="card-top">
+        <div class="city-info">
+          <h2 id="city-name">Chennai</h2>
+          <p id="date"><i class="fa fa-calendar"></i> Monday, 18 May</p>
+        </div>
+        <div class="weather-icon-wrap">
+          <div class="icon-glow"></div>
+          <img id="weather-img" src="" alt="weather icon" />
+        </div>
+      </div>
+
+      <div class="temp-section">
+        <div class="temp-main">
+          <h1 id="temp">34°C</h1>
+          <div class="temp-feels">
+            <p id="feels-like">Feels like 38°C</p>
+            <p id="temp-range">H: 36° / L: 28°</p>
+          </div>
+        </div>
+        <p id="description" class="description">Clear Sky</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="details-grid">
+        <div class="detail-box">
+          <div class="detail-icon-wrap humidity"><i class="fa fa-droplet"></i></div>
+          <div class="detail-info"><p id="humidity">60%</p><span>Humidity</span></div>
+        </div>
+        <div class="detail-box">
+          <div class="detail-icon-wrap wind"><i class="fa fa-wind"></i></div>
+          <div class="detail-info"><p id="wind-speed">12 km/h</p><span>Wind Speed</span></div>
+        </div>
+        <div class="detail-box">
+          <div class="detail-icon-wrap visibility"><i class="fa fa-eye"></i></div>
+          <div class="detail-info"><p id="visibility">10 km</p><span>Visibility</span></div>
+        </div>
+        <div class="detail-box">
+          <div class="detail-icon-wrap pressure"><i class="fa fa-gauge"></i></div>
+          <div class="detail-info"><p id="pressure">1013 hPa</p><span>Pressure</span></div>
+        </div>
+        <div class="detail-box">
+          <div class="detail-icon-wrap sunrise"><i class="fa fa-sun"></i></div>
+          <div class="detail-info"><p id="sunrise">6:02 AM</p><span>Sunrise</span></div>
+        </div>
+        <div class="detail-box">
+          <div class="detail-icon-wrap sunset"><i class="fa fa-moon"></i></div>
+          <div class="detail-info"><p id="sunset">6:48 PM</p><span>Sunset</span></div>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <i class="fa fa-rotate-right"></i>
+        <span id="last-updated">Updated just now</span>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
